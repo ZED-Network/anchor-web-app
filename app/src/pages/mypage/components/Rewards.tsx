@@ -317,16 +317,19 @@ export const Rewards = styled(RewardsBase)`
   // ---------------------------------------------
   table {
     min-width: 1000px;
+
     tbody {
       td {
         font-size: 16px;
         letter-spacing: -0.3px;
+
         .subtext {
           font-size: 12px;
           color: ${({ theme }) => theme.dimTextColor};
         }
       }
     }
+
     thead,
     tbody {
       th:nth-child(3),
@@ -337,9 +340,11 @@ export const Rewards = styled(RewardsBase)`
       td:nth-child(5) {
         text-align: right;
       }
+
       .warning {
         color: ${({ theme }) => theme.colors.negative};
       }
+
       th:nth-child(2),
       td:nth-child(2),
       th:nth-child(6),
@@ -348,6 +353,7 @@ export const Rewards = styled(RewardsBase)`
       }
     }
   }
+
   // ---------------------------------------------
   // layout
   // ---------------------------------------------
@@ -356,12 +362,14 @@ export const Rewards = styled(RewardsBase)`
     h3 {
       display: flex;
       flex-direction: column;
+
       > div {
         label {
           display: inline-block;
           width: 150px;
         }
       }
+
       > div:nth-of-type(2) {
         margin-left: 0;
         margin-top: 10px;

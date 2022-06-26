@@ -11,6 +11,7 @@ import { InfoTooltip } from '@libs/neumorphism-ui/components/InfoTooltip';
 import { Section } from '@libs/neumorphism-ui/components/Section';
 import { AnimateNumber } from '@libs/ui';
 import { Sub } from 'components/Sub';
+import { useAccount } from 'contexts/account';
 import { fixHMR } from 'fix-hmr';
 import { Reward, useRewards } from 'pages/mypage/logics/useRewards';
 import { useAssetPriceInUstQuery } from 'queries';
@@ -29,6 +30,8 @@ const hasReward = (rewards: Reward[] | undefined, target: string) =>
   );
 
 function TotalClaimableRewardsBase({ className }: TotalClaimableRewardsProps) {
+  const { connected } = useAccount();
+
   const { data: ancPrice } = useAssetPriceInUstQuery('anc');
   const { data: astroPrice } = useAssetPriceInUstQuery('astro');
 
@@ -106,7 +109,7 @@ function TotalClaimableRewardsBase({ className }: TotalClaimableRewardsProps) {
         className="claim"
         component={Link}
         to={`/claim/all`}
-        disabled
+        disabled={!connected}
       >
         Claim All Rewards
       </ActionButton>

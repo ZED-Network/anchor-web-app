@@ -129,7 +129,17 @@ function Component({ className }: BAssetClaimProps) {
         </TxFeeList>
 
         <ViewAddressWarning>
-          <ActionButton className="proceed" disabled onClick={proceed}>
+          <ActionButton
+            className="proceed"
+            disabled={
+              !connectedWallet ||
+              !connectedWallet.availablePost ||
+              !claim ||
+              !estimatedAmount ||
+              !!invalidTxFee
+            }
+            onClick={proceed}
+          >
             Claim
           </ActionButton>
         </ViewAddressWarning>

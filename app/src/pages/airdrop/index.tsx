@@ -39,7 +39,7 @@ function AirdropBase({ className }: AirdropProps) {
   // ---------------------------------------------
   // dependencies
   // ---------------------------------------------
-  const { connected } = useAccount();
+  const { availablePost, connected } = useAccount();
 
   const navigate = useNavigate();
 
@@ -144,7 +144,13 @@ function AirdropBase({ className }: AirdropProps) {
         <ViewAddressWarning>
           <ActionButton
             className="proceed"
-            disabled
+            disabled={
+              !connected ||
+              !availablePost ||
+              !claim ||
+              !airdrop ||
+              !!invalidTxFee
+            }
             onClick={() => airdrop && proceed(airdrop)}
           >
             Claim
