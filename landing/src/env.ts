@@ -25,7 +25,7 @@ export const links = {
   whitepaper: 'https://anchorprotocol.com/docs/anchor-v1.1.pdf',
   discord: 'https://discord.gg/9aUYgpKZ9c',
   forum: 'https://forum.anchorprotocol.com/',
-  terra: 'https://terra.money/',
+  terra: 'https://candlelabs.org/',
 };
 
 // force build : 21.08.24

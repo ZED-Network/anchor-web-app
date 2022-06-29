@@ -13,7 +13,7 @@ import { EvmBalancesProvider } from './EvmBalancesProvider';
 import { EvmNetworkProvider } from './EvmNetworkProvider';
 import { ThemeProvider } from 'contexts/theme';
 import { lightTheme as ethereumLightTheme } from 'themes/ethereum/lightTheme';
-import { lightTheme as avalancheLightTheme } from 'themes/avalanche/lightTheme';
+import { lightTheme as candleLightTheme } from 'themes/candle/lightTheme';
 import { Chain, useDeploymentTarget } from '@anchor-protocol/app-provider';
 import { QueryProvider } from 'providers/QueryProvider';
 import { EvmUnsupportedNetwork } from 'components/EvmUnsupportedNetwork';
@@ -89,7 +89,7 @@ export function EvmAppProviders({ children }: UIElementProps) {
         lightTheme={
           target.chain === Chain.Ethereum
             ? ethereumLightTheme
-            : avalancheLightTheme
+            : candleLightTheme
         }
       >
         <ChainGaurdian>{children}</ChainGaurdian>

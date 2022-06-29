@@ -17,6 +17,7 @@ export const AvailableConnections: Connection[] = [
 export const SupportedChainIds: EvmChainId[] = [
   EvmChainId.ETHEREUM,
   EvmChainId.ETHEREUM_ROPSTEN,
+  EvmChainId.CANDLE, // Changed from "AVALANCHE" to "CANDLE" on 06/28/2022 6:04 PM Pacific S.W.S.
   EvmChainId.AVALANCHE,
   EvmChainId.AVALANCHE_FUJI_TESTNET,
 ];
@@ -25,6 +26,7 @@ export const SupportedChainRpcs: Record<EvmChainId, string> = {
   [EvmChainId.ETHEREUM]: 'https://main-rpc.linkpool.io',
   // TODO: add infura key to env variables
   [EvmChainId.ETHEREUM_ROPSTEN]: `https://ropsten.infura.io/v3/${process.env.INFURA_KEY}`,
+  [EvmChainId.CANDLE]: 'https://rpc.cndlchain.com',
   [EvmChainId.AVALANCHE]: 'https://api.avax.network/ext/bc/C/rpc',
   [EvmChainId.AVALANCHE_FUJI_TESTNET]:
     'https://api.avax-test.network/ext/bc/C/rpc',

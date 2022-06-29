@@ -47,10 +47,10 @@ const useFormatters = (): Formatters => {
           ...tokens,
           native: createFormatter<Native>('ETH', 18),
         };
-      case Chain.Avalanche:
+      case Chain.Candle:
         return {
           ...tokens,
-          native: createFormatter<Native>('AVAX', 18),
+          native: createFormatter<Native>('CNDL', 18),
         };
     }
   }, [chain]);

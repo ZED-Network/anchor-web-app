@@ -18,7 +18,7 @@ const EvmNetworkProvider = ({ children }: UIElementProps) => {
     }
     switch (chainId) {
       case EvmChainId.ETHEREUM:
-      case EvmChainId.AVALANCHE:
+      case EvmChainId.CANDLE: // changed from AVALANCHE 06-28-2022
         return MAINNET;
     }
     return TESTNET;

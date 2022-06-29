@@ -30,7 +30,7 @@ function DesktopHeaderBase({ className }: DesktopHeaderProps) {
         <DeploymentSwitch
           terra={() => <img src={LogoTerra} alt="terraLogo" />}
           ethereum={() => <img src={LogoEth} alt="ethLogo" />}
-          avalanche={() => <img src={LogoAvax} alt="avaxLogo" />}
+          candle={() => <img src={LogoAvax} alt="avaxLogo" />}
         />
       </a>
 

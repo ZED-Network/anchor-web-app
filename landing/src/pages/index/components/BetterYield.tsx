@@ -60,7 +60,7 @@ function BetterYieldBase({ className }: BetterYieldProps) {
           better yield
         </h2>
         <p>
-          Anchor's yield is stable and attractive - powered by staking returns
+          Malta's yield is stable and attractive - powered by staking returns
           from multiple Proof of Stake blockchains.
           <br />
           <a href={links.betterYield} target="_blank" rel="noreferrer">
@@ -112,7 +112,7 @@ const Circle = animated((props: Value) => {
       </text>
       <text opacity="0.4" fontSize="10" fill="#373737">
         <tspan x="440" y="505">
-          ANCHOR
+          MALTA
         </tspan>
       </text>
       <text>

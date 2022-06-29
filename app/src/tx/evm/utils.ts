@@ -78,9 +78,8 @@ export const capitalize = (word: string) => {
 
 export const chain = (chainId: EvmChainId) => {
   switch (chainId) {
-    case EvmChainId.AVALANCHE:
-    case EvmChainId.AVALANCHE_FUJI_TESTNET:
-      return 'Avalanche';
+    case EvmChainId.CANDLE:
+      return 'Candle';
     default:
       return 'Ethereum';
   }

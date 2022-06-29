@@ -32,14 +32,14 @@ function EasierIntegrationsBase({ className }: EasierIntegrationsProps) {
 
       <article>
         <h2>
-          Anchor
+          Malta
           <br />
           offers easier
           <br />
           integrations
         </h2>
         <p>
-          Anchor’s open source Savings-as-a-Service SDK can be integrated in 10
+          Malta’s open source Savings-as-a-Service SDK can be integrated in 10
           lines of code to any serviced application holding user balances.
           <br />
           <a href={links.easierIntegration} target="_blank" rel="noreferrer">

@@ -22,9 +22,9 @@ interface DefaultEvmChainId {
 
 export const getDefaultEvmChainId = (chain: Chain): DefaultEvmChainId => {
   switch (chain) {
-    case Chain.Avalanche:
+    case Chain.Candle:
       return {
-        mainnet: EvmChainId.AVALANCHE,
+        mainnet: EvmChainId.CANDLE,
         testnet: EvmChainId.AVALANCHE_FUJI_TESTNET,
       };
     default:
@@ -41,9 +41,9 @@ export const getEvmDeploymentTargetChain = (evmChainId: EvmChainId): Chain => {
     case EvmChainId.ETHEREUM_ROPSTEN:
       return Chain.Ethereum;
 
-    case EvmChainId.AVALANCHE:
+    case EvmChainId.CANDLE:
     case EvmChainId.AVALANCHE_FUJI_TESTNET:
-      return Chain.Avalanche;
+      return Chain.Candle;
   }
-  return Chain.Avalanche;
+  return Chain.Candle;
 };

@@ -7,7 +7,7 @@ import { useLocalStorage } from 'usehooks-ts';
 export enum Chain {
   Terra = 'Terra',
   Ethereum = 'Ethereum',
-  Avalanche = 'Avalanche',
+  Candle = 'Candle',
 }
 
 export const DEPLOYMENT_TARGETS = [
@@ -24,7 +24,7 @@ export const DEPLOYMENT_TARGETS = [
   //   isEVM: true,
   // },
   {
-    chain: Chain.Avalanche,
+    chain: Chain.Candle,
     icon: '/assets/avalanche-logo.svg',
     isNative: false,
     isEVM: true,

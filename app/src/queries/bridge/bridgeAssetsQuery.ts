@@ -2,7 +2,6 @@ import { Chain, DeploymentTarget } from '@anchor-protocol/app-provider';
 import { EvmChainId } from '@anchor-protocol/crossanchor-sdk';
 import { CW20Addr, ERC20Addr } from '@anchor-protocol/types';
 import {
-  ChainId,
   CHAIN_ID_AVAX,
   CHAIN_ID_ETH,
   CHAIN_ID_ETHEREUM_ROPSTEN,
@@ -18,7 +17,7 @@ import { LCDClient } from '@terra-money/terra.js';
 import { NetworkInfo } from '@terra-money/wallet-provider';
 import { ethers } from 'ethers';
 import { WhitelistCollateral } from 'queries';
-
+import { ChainId, CHAIN_ID_CANDLE } from './candle'
 export type BridgeAssets = Map<CW20Addr, CW20Addr | ERC20Addr>;
 
 export function bridgeAssetsQuery(
@@ -200,8 +199,8 @@ const getWormholeChainId = (
       return network.name === 'testnet'
         ? CHAIN_ID_ETHEREUM_ROPSTEN
         : CHAIN_ID_ETH;
-    case Chain.Avalanche:
-      return CHAIN_ID_AVAX;
+    case Chain.Candle:
+      return CHAIN_ID_CANDLE;
   }
   return CHAIN_ID_ETH;
 };
@@ -215,11 +214,11 @@ const getEvmChainId = (
       return network.name === 'testnet'
         ? EvmChainId.ETHEREUM_ROPSTEN
         : EvmChainId.ETHEREUM;
-    case Chain.Avalanche:
+    case Chain.Candle:
       // ethers doesnt recognize many chains
       return network.name === 'testnet'
-        ? 'https://api.avax-test.network/ext/bc/C/rpc'
-        : 'https://api.avax.network/ext/bc/C/rpc';
+        ? 'https://rpc.cndlchain.com'
+        : 'https://rpc.cndlchain.com';
   }
   return EvmChainId.ETHEREUM;
 };

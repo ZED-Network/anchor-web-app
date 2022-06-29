@@ -55,14 +55,14 @@ function MobileHeaderBase({
         <section className="header">
           <a
             className="logo"
-            href="https://anchorprotocol.com"
+            href="https://maltaprotocol.com"
             target="_blank"
             rel="noreferrer"
           >
             <DeploymentSwitch
               terra={() => <img src={LogoTerra} alt="terraLogo" />}
               ethereum={() => <img src={LogoEth} alt="ethLogo" />}
-              avalanche={() => <img src={LogoAvax} alt="avaxLogo" />}
+              candle={() => <img src={LogoAvax} alt="cndlLogo" />}
             />
           </a>
           <div />
@@ -124,7 +124,7 @@ const slide = keyframes`
     transform: translateY(-100%);
     opacity: 0.7;
   }
-  
+
   100% {
     transform: translateY(0);
     opacity: 1;
